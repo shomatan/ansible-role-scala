@@ -1,3 +1,8 @@
 ---
+
+- stat: path=/bin/scala
+  register: result
+
 - name: Ensure scala is installed.
   yum: name="http://downloads.typesafe.com/scala/{{ scala_version }}/scala-{{ scala_version }}.rpm"
+  when: result.stat.exists == False
