@@ -1,24 +1,36 @@
-# Ansible role: scala
+Ansible Role: Scala
+=========
+
 Installs scala.
 
-## Requirements
+Requirements
+------------
+
 None.
 
-### Role variables
-|Key|Type|Description|Default|
-|:--|:---|:----------|:------|
-|scala_version|String||2.11.8|
+Role Variables
+--------------
 
-### Dependencies
-+ [java](https://github.com/shomatan/ansible-java.git)
+    scala_version: 2.12.1
 
-### Example Playbook
+Dependencies
+------------
 
-```yaml
-- hosts: all
-  roles:
-    - { role: scala }
-  vars:
-    scala_version: 2.12.0
+- shomatan.java
 
-```
+Example Playbook
+----------------
+
+    - hosts: servers
+      roles:
+         - { role: shomatan.scala }
+
+License
+-------
+
+MIT
+
+Author Information
+------------------
+
+Shoma Nishitateno
