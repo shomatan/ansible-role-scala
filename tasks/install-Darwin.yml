@@ -1,0 +1,4 @@
+---
+- name: Ensure scala is installed.
+  homebrew:
+    name: scala
